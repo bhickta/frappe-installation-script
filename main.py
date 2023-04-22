@@ -14,7 +14,6 @@ def main():
         os.system(f"sudo apt install -y {prerequisite}")
     for package in pip_packages:
         os.system(package)
-    install_node()
 
     # mysql
     mysql_secure_installation()
