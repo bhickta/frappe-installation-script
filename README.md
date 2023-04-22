@@ -13,3 +13,9 @@ nvm install 18.16.0
 sudo apt-get install npm
 sudo npm install -g yarn
 ```
+
+# Production
+* cd into your frappe-bench folder
+```
+python3 ../frappe-installations/production.py
+```
