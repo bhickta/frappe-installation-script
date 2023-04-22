@@ -13,7 +13,7 @@ def main():
     for package in pip_packages:
         os.system(package)
     for command in node:
-        subprocess.call(command, shell=True)
+        subprocess.call(command)
 
     # mysql
     mysql_secure_installation()
