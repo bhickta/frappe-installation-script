@@ -19,7 +19,7 @@ pip_packages = [
     'sudo pip3 install frappe-bench',
 ]
 
-def node():
+def install_node():
     # Install Node.js
     subprocess.call(['curl', '-sL', 'https://deb.nodesource.com/setup_18.x', '|', 'sudo', '-E', 'bash', '-'])
     subprocess.call(['sudo', 'apt-get', 'install', '-y', 'nodejs'])
