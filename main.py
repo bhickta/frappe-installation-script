@@ -1,4 +1,4 @@
-from prerequisite import prerequisites, restart_prompt, pip_packages, install_node
+from prerequisite import prerequisites, restart_prompt, pip_packages
 from mysql import mysql_conf, mysql_secure_installation
 from production import production_commands, domain_commands, ssh_commands
 import os, click, subprocess
