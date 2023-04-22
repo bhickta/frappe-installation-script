@@ -1,7 +1,7 @@
 import subprocess
 
 def mysql_secure_installation():
-    subprocess.call['sudo','mysql_secure_installation']
+    subprocess.call(['sudo','mysql_secure_installation'])
 
 def mysql_conf():
     # Define the new MySQL configuration
