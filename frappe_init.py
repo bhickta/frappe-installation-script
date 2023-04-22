@@ -13,7 +13,7 @@ def frappe_install():
         'erpnext': '--branch version-14 erpnext',
         # 'hrms': '--branch version-14 hrms',
         'ecommerce_integrations':'ecommerce_integrations --branch main',
-        'india-compliance':'--branch version-14 https://github.com/resilient-tech/india-compliance.git',
+        'india_compliance':'--branch version-14 https://github.com/resilient-tech/india-compliance.git',
         'helpdesk':'helpdesk'
     }
     for k, v in apps.items():
