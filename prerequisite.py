@@ -13,7 +13,7 @@ prerequisites = [
     
 # Node, npm and yarn
 node = [
-    'curl -o install.sh https://raw.githubusercontent.com/creationix/nvm/master/install.sh| bash',
+    'curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash',
     'source ~/.profile',
     'nvm install 16.15.0 -y',
     'sudo apt-get install npm -y',
