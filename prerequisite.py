@@ -10,7 +10,7 @@ prerequisites = [
     'curl', 'git',
     'python3-dev', 'python3.10-dev', 'python3-setuptools', 'python3-pip', 'python3-distutils', 'python3.10-venv',
     'software-properties-common',
-    'xvfb', 'libfontconfig', 'wkhtmltopdf', 'libmysqlclient-dev, certbot'
+    'xvfb', 'libfontconfig', 'wkhtmltopdf', 'libmysqlclient-dev', 'certbot'
 ]
     
 # Install bench
