@@ -1,3 +1,5 @@
+import subprocess
+
 # Stop restart prompt in ubuntu 22.04
 restart_prompt = '''sudo sh -c "echo '$nrconf{restart} = '\''a'\'';' >> /etc/needrestart/needrestart.conf"'''
 
@@ -11,17 +13,19 @@ prerequisites = [
     'xvfb', 'libfontconfig', 'wkhtmltopdf', 'libmysqlclient-dev, certbot'
 ]
     
-# Node, npm and yarn
-node = [
-    'curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash',
-    'source ~/.profile',
-    'nvm install 16.15.0 -y',
-    'sudo apt-get install npm -y',
-    'sudo npm install -g yarn'
-]
-    
 # Install bench
 pip_packages = [
     'pip3 install --upgrade --user pip',
     'sudo pip3 install frappe-bench',
 ]
+
+def node():
+    # Install Node.js
+    subprocess.call(['curl', '-sL', 'https://deb.nodesource.com/setup_18.x', '|', 'sudo', '-E', 'bash', '-'])
+    subprocess.call(['sudo', 'apt-get', 'install', '-y', 'nodejs'])
+
+    # Install npm
+    subprocess.call(['sudo', 'apt-get', 'install', '-y', 'npm'])
+
+    # Install yarn
+    subprocess.call(['sudo', 'npm', 'install', '-g', 'yarn'])

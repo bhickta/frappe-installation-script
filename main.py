@@ -1,7 +1,8 @@
-from prerequisite import prerequisites, restart_prompt, pip_packages, node
+from prerequisite import prerequisites, restart_prompt, pip_packages, install_node
 from mysql import mysql_conf, mysql_secure_installation
 from production import production_commands, domain_commands, ssh_commands
 import os, click, subprocess
+
 
 def main():
     # remove prompts
@@ -12,8 +13,7 @@ def main():
         os.system(f"sudo apt install -y {prerequisite}")
     for package in pip_packages:
         os.system(package)
-    for command in node:
-        subprocess.call(command)
+    install_node()
 
     # mysql
     mysql_secure_installation()
