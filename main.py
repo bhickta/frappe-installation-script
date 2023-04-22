@@ -2,6 +2,7 @@ from prerequisite import prerequisites, restart_prompt, pip_packages, install_no
 from mysql import mysql_conf, mysql_secure_installation
 from production import production_commands, domain_commands, ssh_commands
 import os, click, subprocess
+from frappe_init import frappe_install
 
 
 def main():
@@ -18,6 +19,9 @@ def main():
     # mysql
     mysql_secure_installation()
     mysql_conf()
+
+    # frappe-init
+    frappe_install()
 
     # production
     for production_command, domain_command, ssh_command in zip(production_commands, domain_commands, ssh_commands):
