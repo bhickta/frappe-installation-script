@@ -23,13 +23,6 @@ def main():
     # frappe-init
     frappe_install()
 
-    # production
-    os.chdir('./frappe-bench/')
-    commands = production_commands + domain_commands + ssh_commands
-    for command in commands:
-        os.system(command)
-    os.system(f'bench setup add-domain {site}')
-
     # Success
     click.echo(click.style('Frappe installation completed successfully!', fg='green', bold=True))
 

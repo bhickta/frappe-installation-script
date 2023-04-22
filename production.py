@@ -1,4 +1,5 @@
 # Variables
+import os
 site = 'dev.raplbaddi.com'
 user = "frappe"
 db_name = 'raplbaddi'
@@ -22,3 +23,9 @@ ssh_commands = [
     'bench setup nginx',
     'sudo service nginx reload'
 ]
+
+# production
+commands = production_commands + domain_commands + ssh_commands
+for command in commands:
+    os.system(command)
+os.system(f'bench setup add-domain {site}')
