@@ -1,6 +1,6 @@
 from prerequisite import prerequisites, restart_prompt, pip_packages
 from mysql import mysql_conf, mysql_secure_installation
-from production import production_commands, domain_commands, ssh_commands
+from production import production_commands
 import os, click
 from frappe_init import frappe_install
 from production import site
