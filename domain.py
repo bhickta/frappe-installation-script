@@ -6,13 +6,11 @@ user = input("Enter user name that will use frappe \n")
 db_name = input("Enter database name \n")
 db_password = input("Enter your database password \n")
 
-ssh_commands = [
-    'bench config dns_multitenant on',
+domain_commands = [
+    f'bench setup add-domain {site}',
     'bench setup nginx',
     'sudo service nginx reload'
 ]
 
-for command in ssh_commands:
+for command in domain_commands:
     os.system(command)
-
-os.system(f'sudo -H bench setup lets-encrypt {site}')
