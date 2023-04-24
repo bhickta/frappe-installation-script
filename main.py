@@ -4,11 +4,15 @@ from production import production_commands, domain_commands, ssh_commands
 import os, click
 from frappe_init import frappe_install
 from production import site
+from swap import add_swap
 
 
 def main():
     # remove prompts
     os.system(restart_prompt)
+
+    # swap
+    add_swap()
 
     # prerequisite
     for prerequisite in prerequisites:
