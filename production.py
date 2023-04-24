@@ -15,19 +15,7 @@ production_commands = [
     'sudo supervisorctl restart all',
     f'sudo bench setup production {user}'
 ]
-domain_commands = [
-    f'bench setup add-domain {site}',
-    'bench setup nginx',
-    'sudo service nginx reload'
-]
-ssh_commands = [
-    'bench config dns_multitenant on',
-    'bench setup nginx',
-    'sudo service nginx reload'
-]
 
 # production
-commands = production_commands + domain_commands + ssh_commands
-for command in commands:
+for command in production_commands:
     os.system(command)
-os.system(f'sudo -H bench setup lets-encrypt {site}')
