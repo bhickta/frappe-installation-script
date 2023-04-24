@@ -2,10 +2,10 @@
 import os
 import click
 
-site = input("Enter your site domain name without https or https")
-user = input("Enter user name that will use frappe")
-db_name = input("Enter database name")
-db_password = input("Enter your database password")
+site = input("Enter your site domain name without https or https \n")
+user = input("Enter user name that will use frappe \n")
+db_name = input("Enter database name \n")
+db_password = input("Enter your database password \n")
 
 production_commands = [
     f'bench --site {site} enable-scheduler',
