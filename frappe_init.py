@@ -12,11 +12,12 @@ def frappe_install():
     apps = {
         'payments': ' --branch develop payments',
         'erpnext': '--branch version-14 erpnext',
-        'hrms': '--branch develop hrms',
+#         'hrms': '--branch develop hrms',
         'india_compliance':'--branch version-14 https://github.com/resilient-tech/india-compliance.git',
         'ecommerce_integrations':'ecommerce_integrations --branch main',
-        'helpdesk':'helpdesk',
-        'insights':'--branch develop insights'
+        'raplbaddi':'git@github.com:bhickta/raplbaddi.git',
+#         'helpdesk':'helpdesk',
+#         'insights':'--branch develop insights'
     }
     for k, v in apps.items():
         os.system(f'bench get-app {v}')
