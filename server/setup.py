@@ -13,7 +13,7 @@ class Setup:
         ]
 
     def adding_user(self):
-        user = self.config.frappe_user
+        user = self.user
         os.system(f"sudo adduser {user}")
         os.chdir(f"/home/{user}")
         os.system(f"usermod -aG sudo {user}")
