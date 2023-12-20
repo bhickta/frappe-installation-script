@@ -1,13 +1,12 @@
-from decouple import config
 from dataclasses import dataclass
 
 
 @dataclass
 class Config:
-    frappe_user = config("FRAPPE_USER")
-    site_name = config("SITE_NAME")
-    db_name = config("DB_NAME")
-    db_password = config("DB_PASSWORD")
+    frappe_user = 'frappe'
+    site_name = 'test.dev.com'
+    db_name = 'dev'
+    db_password = 'changeme'
     apps = {
         "payments": " --branch develop payments",
         "erpnext": "--branch version-14 erpnext",
