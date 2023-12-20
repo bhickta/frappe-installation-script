@@ -33,7 +33,7 @@ class Config:
         "python3.10-venv",
         "software-properties-common",
         "xvfb",
-        "libfontconfig",z
+        "libfontconfig",
         "wkhtmltopdf",
         "libmysqlclient-dev",
         "certbot",
