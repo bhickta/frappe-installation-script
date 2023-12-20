@@ -1,11 +1,12 @@
 import os
+from config.config import Config
 
 
 class Setup:
-    def __init__(self, Config, prod_dependencies) -> None:
+    def __init__(self, config: Config) -> None:
         self.user = Config.frappe_user
         self.site = Config.site_name
-        self.prod_dependencies = prod_dependencies
+        self.prod_dependencies = config.prod_dependencies
         self.pip_packages = [
             "pip3 install --upgrade --user pip",
             "sudo pip3 install frappe-bench",

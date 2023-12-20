@@ -1,6 +1,6 @@
 from server.setup import Setup
 def main():
-    Setup.setup()
+    Setup().setup()
     # mysql_secure_installation()
     # mysql_conf()
 
