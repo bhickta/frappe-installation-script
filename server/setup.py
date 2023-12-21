@@ -15,6 +15,7 @@ class Setup:
     def adding_user(self):
         user = self.user
         os.system(f"sudo adduser {user}")
+        os.system(f"mkdir /home/{user}")
         os.chdir(f"/home/{user}")
         os.system(f"usermod -aG sudo {user}")
         os.system(f"su {user}")
